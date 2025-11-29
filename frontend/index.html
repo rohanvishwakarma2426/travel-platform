@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Travel Stories</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <i class="fa-solid fa-plane"></i> Travel Stories
+    </div>
+
+    <div class="nav-right">
+        <a href="addStory.html" class="nav-btn">
+            <i class="fa-solid fa-plus"></i> Add Story
+        </a>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+</nav>
+
+
+
+<h2 class="page-title">Explore Beautiful Stories</h2>
+
+<div id="stories" class="story-grid"></div>
+
+<script src="script.js"></script>
+<script>fetchStories();</script>
+
+</body>
+</html>
