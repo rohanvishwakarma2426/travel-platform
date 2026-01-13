@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Add New Story</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+}
+
+/* ---------- NAVBAR ---------- */
+nav {
+    width: 100%;
+    padding: 18px 50px;
+    background: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+
+nav a {
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.btn-logout {
+    background: red;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ---------- FORM CONTAINER ---------- */
+.form-container {
+    width: 460px;
+    background: white;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+/* ---------- INPUT ---------- */
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 120px;
+}
+
+/* ---------- BUTTON ---------- */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #007bff;
+    border: none;
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005fcc;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div><i class="fa-solid fa-plane"></i> Travel Stories</div>
+    <div>
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <button onclick="logout()" class="btn-logout">Logout</button>
+    </div>
+</nav>
+
+<!-- FORM -->
+<div class="form-container">
+
+    <h2>Add New Story</h2>
+
+    <input type="text" id="title" placeholder="Story Title">
+    <textarea id="description" placeholder="Write something..."></textarea>
+    <input type="file" id="image">
+
+    <button onclick="addStory()">Upload Story</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

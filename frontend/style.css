@@ -1,0 +1,205 @@
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f3f6fb;
+    overflow-x: hidden !important;   /* Prevent horizontal scroll */
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    width: 100%;
+    padding: 18px 40px;
+    background: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Add Story Button */
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 16px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Logout Button */
+
+.logout-btn {
+    background: #ff3333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.logout-btn:hover {
+    background: #c40000;
+}
+
+/* ================= HEADER TITLE ================= */
+
+.page-title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 40px 0 30px 0;
+    color: #1b1b1b;
+}
+
+/* ================= STORY GRID ================= */
+
+#stories {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 35px;
+    padding-bottom: 60px;
+}
+
+/* ================= STORY CARD ================= */
+
+.story-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.story-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.story-card h3 {
+    margin: 15px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.story-card p {
+    margin: 0 15px 15px 15px;
+    color: #555;
+}
+
+/* ================= DELETE BUTTON ================= */
+
+.delete-btn {
+    margin: 15px;
+    padding: 10px 18px;
+    background: #ff3b3b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+/* ================= FORM PAGE (ADD STORY) ================= */
+
+.form-box {
+    width: 420px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005fcc;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+    nav {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+}
